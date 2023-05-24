@@ -12,7 +12,7 @@ const Features = () => {
                 heading="from our menu"
                 ></TitleSctions>
             </div>
-            <div className='md:flex justify-center gap-10 w-8/12 mx-auto pt-7 py-11'>
+            <div className='md:flex justify-center opacity-60 bg-slate-700 px-11 gap-10 w-8/12 mx-auto pt-7 py-11'>
                 <img className='w-72 h-52 ' src={img} alt="" />
                 <div className=''>
                     <h4>March 20, 2023</h4>

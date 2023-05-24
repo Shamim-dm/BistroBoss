@@ -9,9 +9,8 @@ import Navbar from '../Pages/Sheared/Navbar/Navbar';
 const Main = () => {
     return (
         <div className='w-11/12 mx-auto'>
-            <Navbar></Navbar>
-          
-            <Home></Home>
+            <Navbar></Navbar>  
+                       
             <Outlet></Outlet>
             <Footer></Footer>
             </div>
