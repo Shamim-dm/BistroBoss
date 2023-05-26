@@ -1,12 +1,10 @@
 import React from "react";
 
-const Popularitems = ({ items }) => {
-  console.log(items);
+const MenuItems = ({ items }) => {
   const { _id, image, name, recipe, price } = items;
-
   return (
-    <div className="flex gap-5">
-      <img className="w-20 " src={image} alt="" />
+    <div className="flex gap-3">
+      <img className="w-20" src={image} alt="" />
 
       <div>
         <p className="text-xl">{name}----------</p>
@@ -17,4 +15,4 @@ const Popularitems = ({ items }) => {
   );
 };
 
-export default Popularitems;
+export default MenuItems;
