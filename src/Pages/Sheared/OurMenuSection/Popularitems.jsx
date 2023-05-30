@@ -1,7 +1,7 @@
 import React from "react";
 
 const Popularitems = ({ items }) => {
-  console.log(items);
+  // console.log(items);
   const { _id, image, name, recipe, price } = items;
 
   return (

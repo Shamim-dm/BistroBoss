@@ -9,9 +9,12 @@ import OrderMenu from "../OrderMenu/OrderMenu";
 import OrdersItems from "../OrdersItems/OrdersItems";
 
 const Orders = () => {
-  const [datas] = useMenu();
-  const [orderIndex, setOrderIndex] = useState(0);
-  const {category} = useParams()
+    const categories = ['salad', 'pizza', 'soup', 'dessert', 'drinks']
+    const {category} = useParams()
+    const initialIndex = categories.indexOf(category)
+    const [datas] = useMenu();
+  const [orderIndex, setOrderIndex] = useState(initialIndex);
+  
   console.log(category)
 
   
