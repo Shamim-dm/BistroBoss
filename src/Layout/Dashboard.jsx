@@ -3,13 +3,15 @@ import { NavLink, Outlet } from "react-router-dom";
 import { FaBeer, FaCalculator, FaContao, FaGratipay, FaHome, FaMendeley, FaRev, FaShopify, FaShoppingCart } from 'react-icons/fa';
 import { Helmet } from "react-helmet";
 import useCart from "../UseCart/useCart";
+import useAdmin from "../Hooks/useAdmin";
 
 
 const Dashboard = () => {
     const [cart]= useCart()
 
     // todo: load data from server to have daynamic isAdmin based
-   const  isAdmin = true;
+  //  const  isAdmin = true;
+  const [isAdmin] = useAdmin();
   return (
 
   
@@ -20,14 +22,16 @@ const Dashboard = () => {
            
            <div className="drawer drawer-mobile">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
+      <div className="drawer-content relative flex flex-col items-center justify-center">
         <Outlet></Outlet>
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
+          className="btn btn-primary drawer-button absolute top-0 right-5   lg:hidden"
         >
-          Open drawer
+        <img className="w-5 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" alt="" />
+
         </label>
+        
       </div>
       <div className="drawer-side ">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
@@ -38,7 +42,7 @@ const Dashboard = () => {
           <NavLink to='/'> <FaHome /> Addmin Home</NavLink>
           </li>
           <li >
-          <NavLink to='/dashboard/reservation'><FaCalculator></FaCalculator> Add Items</NavLink>
+          <NavLink to='/dashboard/add-item'><FaCalculator></FaCalculator> Add an Items</NavLink>
           </li>
           <li >
           <NavLink to='/dashboard/history'><FaGratipay></FaGratipay> Manage Items</NavLink>

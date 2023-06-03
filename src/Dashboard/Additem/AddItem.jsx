@@ -1,17 +1,11 @@
 import React from 'react';
 
-
-const Providers = () => {
-
-   
-
-
-
+const AddItem = () => {
     return (
         <div>
-            
+            <h2>Add an Item</h2>
         </div>
     );
 };
 
-export default Providers;
+export default AddItem;
